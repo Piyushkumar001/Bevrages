@@ -1,0 +1,30 @@
+{% load static %} {% include 'header.html' %}
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'assets/img/sign.jpeg' %}" alt="..." />
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">SignUp</span>
+                    <hr>
+
+                </h2>
+                <form action="{% url 'register' %}" method="post">{% csrf_token %}
+                    <p class="mb-3">
+                        {{frm.as_p}}
+                    </p>
+                    <div class="intro-button mx-auto">
+                        <button class="btn btn-primary btn-xl" type="submit">Register</button>
+                        <a href="{% url 'login' %}" class="btn btn-primary btn-xl" type="submit">Login</a>
+
+
+                        <!-- <a class="btn btn-primary btn-xl" type="submit" href="{% url 'register' %}">Register</a> --></div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}
