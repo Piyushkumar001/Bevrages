@@ -6,10 +6,11 @@ urlpatterns = [
     		path('about/', about, name = "about"),
 			path('products/', products, name = "products"),
 			path('store/', store, name = "store"),
+			#path('visit_us_today/', visit_us_today, name="register.html"),
 
     		path('register/', registerUser, name = "register"),
 			path('login/', loginUser, name = "login"),
 			path('logout/', logoutUser, name = "logout"),
-			path('order_det/<int:id>', OrderDetails, name = "order_det"),
+			path('order_det', OrderDetails, name = "order_det"),
 
 ]

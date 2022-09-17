@@ -48,11 +48,11 @@ def logoutUser(request):
 	logout(request)
 	return redirect('login')
 	
-def OrderDetails(request, id):
+def OrderDetails(request):
     frm=OrderdetailForm()
-    o = OrderDetails.objects.get(id = pk)
-    frm = OrderDetailsForm(instance = o)
-    #o = OrderDetails.objects.get(id = pk)
     return render(request, 'cart.html', {'frm':frm})
+
+def visit_us_today(request):
+	return render(request, 'register.html', {})
 
 
